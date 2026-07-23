@@ -1,0 +1,15 @@
+// PAMoLa Core v1.0.0
+// Minimal MLT profile vocabulary used by the ER 2026 artifact.
+
+EN {hasName "MLT", hasFQN "Ordium.Profile.MLT", hasPID "profile:mlt:v1.0.0", hasNote "Minimal MLT vocabulary used by the ER 2026 OntoUML/MLT diagnostic artifact. Terms are referenceable DataValues; semantics are supplied by the diagnostic ware.", hasCustodian Ordium.Profile, hasLinguisticType Ordium.Core.Entity,
+  DT {hasName "PowertypeRelation",
+    DV {hasName "powertypeOf", hasNote "Classifier whose members are the base type and/or its specializations, under the structural approximation used in this artifact."},
+    DV {hasName "categorizes", hasNote "Higher-order classifier whose members specialize the referenced base type."},
+    DV {hasName "partitions", hasNote "Categorizer intended to be complete and disjoint over the referenced base type."}
+  },
+  DT {hasName "HigherOrderKind",
+    DV {hasName "powertype"},
+    DV {hasName "categorizer"},
+    DV {hasName "partition"}
+  }
+}

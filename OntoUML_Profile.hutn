@@ -1,0 +1,775 @@
+EN {hasName "OntoUML", hasFQN "Ordium.Profile.OntoUML", hasPID "profile:ontouml:v1.0.0", hasNote "PAMoLa OntoUML profile clade v1.0.0. Profile and OntoUML are Entities; only the Ordium Core instantiates OM directly. DataValue names are their default lexemes unless explicit Literal wards add alternatives.", hasCustodian Ordium.Profile, follows Ordium.Profile, hasLinguisticType Ordium.Core.Entity,
+  DT {hasName "ClassStereotype", hasFQN "Ordium.Profile.OntoUML.ClassStereotype", hasNote "OntoUML class stereotype values. The DataValue name is the default lexeme.",
+    DV {hasName "abstract", hasNote "Abstract class stereotype used in OntoUML serialization/vocabulary."},
+    DV {hasName "kind", hasNote "Rigid sortal that supplies an identity principle for its instances."},
+    DV {hasName "subkind", hasNote "Rigid specialization of an identity provider."},
+    DV {hasName "phase", hasNote "Anti-rigid sortal determined by intrinsic change; phases typically occur in partitions."},
+    DV {hasName "role", hasNote "Anti-rigid sortal instantiated in a relational context."},
+    DV {hasName "collective", hasNote "Rigid sortal for collective individuals."},
+    DV {hasName "quantity", hasNote "Rigid sortal for quantities of matter."},
+    DV {hasName "relator", hasNote "Relational moment / truth-maker for material relations."},
+    DV {hasName "category", hasNote "Rigid non-sortal mixin aggregating essential properties across identity principles."},
+    DV {hasName "phaseMixin", hasNote "Anti-rigid non-sortal mixin analogous to Phase across different identity principles."},
+    DV {hasName "roleMixin", hasNote "Anti-rigid externally-dependent non-sortal mixin analogous to Role across identity principles."},
+    DV {hasName "mixin", hasNote "Semi-rigid non-sortal mixin."},
+    DV {hasName "mode", hasNote "Intrinsic moment with no structured value."},
+    DV {hasName "quality", hasNote "Intrinsic moment associated with a quality/value structure."},
+    DV {hasName "datatype", hasNote "Datatype class stereotype."},
+    DV {hasName "enumeration", hasNote "Enumeration class stereotype."},
+    DV {hasName "event", hasNote "Event class stereotype."},
+    DV {hasName "situation", hasNote "Situation class stereotype."},
+    DV {hasName "historicalRole", hasNote "Historical role class stereotype."},
+    DV {hasName "historicalRoleMixin", hasNote "Historical role mixin class stereotype."},
+    DV {hasName "type", hasNote "Higher-order type class stereotype."}
+  },
+  DT {hasName "ClassFamily", hasFQN "Ordium.Profile.OntoUML.ClassFamily", hasNote "Derived families used as profile predicates to capture the OntoUML class stereotype hierarchy.",
+    DV {hasName "classStereotype", hasNote "Any OntoUML class stereotype."},
+    DV {hasName "sortal", hasNote "Stereotype for class types whose instances share an identity principle."},
+    DV {hasName "nonSortal", hasNote "Stereotype for dispersive/mixin-like class types that aggregate instances with different identity principles."},
+    DV {hasName "aspect", hasNote "Stereotype for aspect/moment-like class types."},
+    DV {hasName "identityProvider", hasNote "Sortal stereotype that supplies an identity principle."},
+    DV {hasName "rigidSortal", hasNote "Rigid sortal stereotype."},
+    DV {hasName "antiRigidSortal", hasNote "Anti-rigid sortal stereotype."},
+    DV {hasName "rigidNonSortal", hasNote "Rigid non-sortal stereotype."},
+    DV {hasName "antiRigidNonSortal", hasNote "Anti-rigid non-sortal stereotype."},
+    DV {hasName "semiRigidNonSortal", hasNote "Semi-rigid non-sortal stereotype."},
+    DV {hasName "dataTypeLike", hasNote "Datatype or enumeration stereotype."},
+    DV {hasName "eventType", hasNote "Event stereotype family."},
+    DV {hasName "situationType", hasNote "Situation stereotype family."},
+    DV {hasName "historicalType", hasNote "Historical role/role-mixin family."},
+    DV {hasName "higherOrderType", hasNote "Higher-order type stereotype family."}
+  },
+  DT {hasName "RelationStereotype", hasFQN "Ordium.Profile.OntoUML.RelationStereotype", hasNote "OntoUML relation stereotype values. The DataValue name is the default lexeme.",
+    DV {hasName "formal", hasNote "Formal relation stereotype."},
+    DV {hasName "material", hasNote "Material relation stereotype derived from relators and mediations."},
+    DV {hasName "mediation", hasNote "Relation between a relator and the entities it connects."},
+    DV {hasName "characterization", hasNote "Relation between a bearer type and its feature/moment."},
+    DV {hasName "derivation", hasNote "Derivation relation stereotype."},
+    DV {hasName "structuration", hasNote "Structuration relation stereotype."},
+    DV {hasName "componentOf", hasNote "Part-whole relation between functional complexes."},
+    DV {hasName "containment", hasNote "Containment part-whole relation stereotype."},
+    DV {hasName "memberOf", hasNote "Part-whole relation between member and collective."},
+    DV {hasName "subCollectionOf", hasNote "Part-whole relation between collectives."},
+    DV {hasName "subQuantityOf", hasNote "Part-whole relation between quantities."},
+    DV {hasName "comparative", hasNote "Comparative relation stereotype."},
+    DV {hasName "externalDependence", hasNote "External dependence relation stereotype."},
+    DV {hasName "historicalDependence", hasNote "Historical dependence relation stereotype."},
+    DV {hasName "instantiation", hasNote "Instantiation relation stereotype."},
+    DV {hasName "participation", hasNote "Relation representing an event depending on an object."},
+    DV {hasName "participational", hasNote "Event decomposition relation stereotype."},
+    DV {hasName "bringsAbout", hasNote "Relation stereotype for an event bringing about a situation or result."},
+    DV {hasName "creation", hasNote "Creation relation stereotype."},
+    DV {hasName "termination", hasNote "Termination relation stereotype."},
+    DV {hasName "manifestation", hasNote "Manifestation relation stereotype."},
+    DV {hasName "triggers", hasNote "Triggers relation stereotype."}
+  },
+  DT {hasName "RelationFamily", hasFQN "Ordium.Profile.OntoUML.RelationFamily", hasNote "Derived families used as profile predicates to capture the OntoUML relation stereotype hierarchy.",
+    DV {hasName "relationStereotype", hasNote "Any OntoUML relation stereotype."},
+    DV {hasName "dependencyRelation", hasNote "Dependence-oriented relation stereotype."},
+    DV {hasName "partWholeRelation", hasNote "Part-whole relation stereotype."},
+    DV {hasName "eventRelation", hasNote "Event-related relation stereotype."},
+    DV {hasName "relatorRelation", hasNote "Relator/material-relation stereotype family."}
+  },
+  DT {hasName "PropertyStereotype", hasFQN "Ordium.Profile.OntoUML.PropertyStereotype", hasNote "OntoUML property stereotype values.",
+    DV {hasName "begin", hasNote "Property stereotype identifying the beginning endpoint of an interval/event-related relation."},
+    DV {hasName "end", hasNote "Property stereotype identifying the ending endpoint of an interval/event-related relation."}
+  },
+  DT {hasName "AggregationKind", hasFQN "Ordium.Profile.OntoUML.AggregationKind", hasNote "Aggregation kind values used with participation/property projections.",
+    DV {hasName "none", hasNote "No UML aggregation."},
+    DV {hasName "shared", hasNote "Shared aggregation."},
+    DV {hasName "composite", hasNote "Composite aggregation."}
+  },
+  DT {hasName "OntologicalNature", hasFQN "Ordium.Profile.OntoUML.OntologicalNature", hasNote "Ontological nature values used by the OntoUML vocabulary.",
+    DV {hasName "functionalComplex", hasNote "Functional complex ontological nature."},
+    DV {hasName "collective", hasNote "Collective ontological nature."},
+    DV {hasName "quantity", hasNote "Quantity ontological nature."},
+    DV {hasName "relator", hasNote "Relator ontological nature."},
+    DV {hasName "intrinsicMode", hasNote "Intrinsic mode ontological nature."},
+    DV {hasName "extrinsicMode", hasNote "Extrinsic mode ontological nature."},
+    DV {hasName "quality", hasNote "Quality ontological nature."},
+    DV {hasName "event", hasNote "Event ontological nature."},
+    DV {hasName "situation", hasNote "Situation ontological nature."},
+    DV {hasName "type", hasNote "Type / higher-order nature."}
+  },
+  EN {hasName "rule", hasFQN "Ordium.Profile.OntoUML.rule", hasNote "Profile-local rule clade. Family membership facts capture the OntoUML stereotype hierarchy. DataValue names are default lexemes; no redundant Literal wards are generated.",
+    AO {hasName "abstractIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype abstract is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.abstract},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.abstract},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.abstract, follows Ordium.Profile.OntoUML.rule.abstractIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "kindIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype kind is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind, follows Ordium.Profile.OntoUML.rule.kindIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subkindIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype subkind is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind, follows Ordium.Profile.OntoUML.rule.subkindIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype phase is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase, follows Ordium.Profile.OntoUML.rule.phaseIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype role is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role, follows Ordium.Profile.OntoUML.rule.roleIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "collectiveIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype collective is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective, follows Ordium.Profile.OntoUML.rule.collectiveIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "quantityIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype quantity is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity, follows Ordium.Profile.OntoUML.rule.quantityIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "relatorIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype relator is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator, follows Ordium.Profile.OntoUML.rule.relatorIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "categoryIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype category is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category, follows Ordium.Profile.OntoUML.rule.categoryIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseMixinIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype phaseMixin is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin, follows Ordium.Profile.OntoUML.rule.phaseMixinIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleMixinIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype roleMixin is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin, follows Ordium.Profile.OntoUML.rule.roleMixinIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mixinIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype mixin is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin, follows Ordium.Profile.OntoUML.rule.mixinIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "modeIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype mode is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode, follows Ordium.Profile.OntoUML.rule.modeIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "qualityIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype quality is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality, follows Ordium.Profile.OntoUML.rule.qualityIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "datatypeIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype datatype is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype, follows Ordium.Profile.OntoUML.rule.datatypeIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "enumerationIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype enumeration is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration, follows Ordium.Profile.OntoUML.rule.enumerationIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "eventIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype event is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event, follows Ordium.Profile.OntoUML.rule.eventIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "situationIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype situation is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation, follows Ordium.Profile.OntoUML.rule.situationIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalRoleIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype historicalRole is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole, follows Ordium.Profile.OntoUML.rule.historicalRoleIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalRoleMixinIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype historicalRoleMixin is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin, follows Ordium.Profile.OntoUML.rule.historicalRoleMixinIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "typeIsClassStereotype", hasPredicate Ordium.Profile.OntoUML.ClassFamily.classStereotype, hasNote "OntoUML class stereotype type is a member of class family classStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type, follows Ordium.Profile.OntoUML.rule.typeIsClassStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "kindIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype kind is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind, follows Ordium.Profile.OntoUML.rule.kindIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subkindIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype subkind is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind, follows Ordium.Profile.OntoUML.rule.subkindIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype phase is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase, follows Ordium.Profile.OntoUML.rule.phaseIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype role is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role, follows Ordium.Profile.OntoUML.rule.roleIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "collectiveIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype collective is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective, follows Ordium.Profile.OntoUML.rule.collectiveIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "quantityIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype quantity is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity, follows Ordium.Profile.OntoUML.rule.quantityIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "relatorIsSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.sortal, hasNote "OntoUML class stereotype relator is a member of class family sortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator, follows Ordium.Profile.OntoUML.rule.relatorIsSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "categoryIsNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.nonSortal, hasNote "OntoUML class stereotype category is a member of class family nonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category, follows Ordium.Profile.OntoUML.rule.categoryIsNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseMixinIsNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.nonSortal, hasNote "OntoUML class stereotype phaseMixin is a member of class family nonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin, follows Ordium.Profile.OntoUML.rule.phaseMixinIsNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleMixinIsNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.nonSortal, hasNote "OntoUML class stereotype roleMixin is a member of class family nonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin, follows Ordium.Profile.OntoUML.rule.roleMixinIsNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mixinIsNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.nonSortal, hasNote "OntoUML class stereotype mixin is a member of class family nonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin, follows Ordium.Profile.OntoUML.rule.mixinIsNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "modeIsAspect", hasPredicate Ordium.Profile.OntoUML.ClassFamily.aspect, hasNote "OntoUML class stereotype mode is a member of class family aspect.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mode, follows Ordium.Profile.OntoUML.rule.modeIsAspect.AO__1.AG__1}
+      }
+    },
+    AO {hasName "qualityIsAspect", hasPredicate Ordium.Profile.OntoUML.ClassFamily.aspect, hasNote "OntoUML class stereotype quality is a member of class family aspect.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quality, follows Ordium.Profile.OntoUML.rule.qualityIsAspect.AO__1.AG__1}
+      }
+    },
+    AO {hasName "kindIsIdentityProvider", hasPredicate Ordium.Profile.OntoUML.ClassFamily.identityProvider, hasNote "OntoUML class stereotype kind is a member of class family identityProvider.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind, follows Ordium.Profile.OntoUML.rule.kindIsIdentityProvider.AO__1.AG__1}
+      }
+    },
+    AO {hasName "collectiveIsIdentityProvider", hasPredicate Ordium.Profile.OntoUML.ClassFamily.identityProvider, hasNote "OntoUML class stereotype collective is a member of class family identityProvider.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective, follows Ordium.Profile.OntoUML.rule.collectiveIsIdentityProvider.AO__1.AG__1}
+      }
+    },
+    AO {hasName "quantityIsIdentityProvider", hasPredicate Ordium.Profile.OntoUML.ClassFamily.identityProvider, hasNote "OntoUML class stereotype quantity is a member of class family identityProvider.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity, follows Ordium.Profile.OntoUML.rule.quantityIsIdentityProvider.AO__1.AG__1}
+      }
+    },
+    AO {hasName "relatorIsIdentityProvider", hasPredicate Ordium.Profile.OntoUML.ClassFamily.identityProvider, hasNote "OntoUML class stereotype relator is a member of class family identityProvider.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator, follows Ordium.Profile.OntoUML.rule.relatorIsIdentityProvider.AO__1.AG__1}
+      }
+    },
+    AO {hasName "kindIsRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidSortal, hasNote "OntoUML class stereotype kind is a member of class family rigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.kind, follows Ordium.Profile.OntoUML.rule.kindIsRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subkindIsRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidSortal, hasNote "OntoUML class stereotype subkind is a member of class family rigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.subkind, follows Ordium.Profile.OntoUML.rule.subkindIsRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "collectiveIsRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidSortal, hasNote "OntoUML class stereotype collective is a member of class family rigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.collective, follows Ordium.Profile.OntoUML.rule.collectiveIsRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "quantityIsRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidSortal, hasNote "OntoUML class stereotype quantity is a member of class family rigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.quantity, follows Ordium.Profile.OntoUML.rule.quantityIsRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "relatorIsRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidSortal, hasNote "OntoUML class stereotype relator is a member of class family rigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.relator, follows Ordium.Profile.OntoUML.rule.relatorIsRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseIsAntiRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.antiRigidSortal, hasNote "OntoUML class stereotype phase is a member of class family antiRigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phase, follows Ordium.Profile.OntoUML.rule.phaseIsAntiRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleIsAntiRigidSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.antiRigidSortal, hasNote "OntoUML class stereotype role is a member of class family antiRigidSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.role, follows Ordium.Profile.OntoUML.rule.roleIsAntiRigidSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "categoryIsRigidNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.rigidNonSortal, hasNote "OntoUML class stereotype category is a member of class family rigidNonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.category, follows Ordium.Profile.OntoUML.rule.categoryIsRigidNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "phaseMixinIsAntiRigidNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.antiRigidNonSortal, hasNote "OntoUML class stereotype phaseMixin is a member of class family antiRigidNonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.phaseMixin, follows Ordium.Profile.OntoUML.rule.phaseMixinIsAntiRigidNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "roleMixinIsAntiRigidNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.antiRigidNonSortal, hasNote "OntoUML class stereotype roleMixin is a member of class family antiRigidNonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.roleMixin, follows Ordium.Profile.OntoUML.rule.roleMixinIsAntiRigidNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mixinIsSemiRigidNonSortal", hasPredicate Ordium.Profile.OntoUML.ClassFamily.semiRigidNonSortal, hasNote "OntoUML class stereotype mixin is a member of class family semiRigidNonSortal.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.mixin, follows Ordium.Profile.OntoUML.rule.mixinIsSemiRigidNonSortal.AO__1.AG__1}
+      }
+    },
+    AO {hasName "datatypeIsDataTypeLike", hasPredicate Ordium.Profile.OntoUML.ClassFamily.dataTypeLike, hasNote "OntoUML class stereotype datatype is a member of class family dataTypeLike.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.datatype, follows Ordium.Profile.OntoUML.rule.datatypeIsDataTypeLike.AO__1.AG__1}
+      }
+    },
+    AO {hasName "enumerationIsDataTypeLike", hasPredicate Ordium.Profile.OntoUML.ClassFamily.dataTypeLike, hasNote "OntoUML class stereotype enumeration is a member of class family dataTypeLike.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.enumeration, follows Ordium.Profile.OntoUML.rule.enumerationIsDataTypeLike.AO__1.AG__1}
+      }
+    },
+    AO {hasName "eventIsEventType", hasPredicate Ordium.Profile.OntoUML.ClassFamily.eventType, hasNote "OntoUML class stereotype event is a member of class family eventType.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.event, follows Ordium.Profile.OntoUML.rule.eventIsEventType.AO__1.AG__1}
+      }
+    },
+    AO {hasName "situationIsSituationType", hasPredicate Ordium.Profile.OntoUML.ClassFamily.situationType, hasNote "OntoUML class stereotype situation is a member of class family situationType.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.situation, follows Ordium.Profile.OntoUML.rule.situationIsSituationType.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalRoleIsHistoricalType", hasPredicate Ordium.Profile.OntoUML.ClassFamily.historicalType, hasNote "OntoUML class stereotype historicalRole is a member of class family historicalType.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRole, follows Ordium.Profile.OntoUML.rule.historicalRoleIsHistoricalType.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalRoleMixinIsHistoricalType", hasPredicate Ordium.Profile.OntoUML.ClassFamily.historicalType, hasNote "OntoUML class stereotype historicalRoleMixin is a member of class family historicalType.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.historicalRoleMixin, follows Ordium.Profile.OntoUML.rule.historicalRoleMixinIsHistoricalType.AO__1.AG__1}
+      }
+    },
+    AO {hasName "typeIsHigherOrderType", hasPredicate Ordium.Profile.OntoUML.ClassFamily.higherOrderType, hasNote "OntoUML class stereotype type is a member of class family higherOrderType.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.ClassStereotype.type, follows Ordium.Profile.OntoUML.rule.typeIsHigherOrderType.AO__1.AG__1}
+      }
+    },
+    AO {hasName "formalIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype formal is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.formal},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.formal},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.formal, follows Ordium.Profile.OntoUML.rule.formalIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "materialIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype material is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material, follows Ordium.Profile.OntoUML.rule.materialIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mediationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype mediation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation, follows Ordium.Profile.OntoUML.rule.mediationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "characterizationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype characterization is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization, follows Ordium.Profile.OntoUML.rule.characterizationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "derivationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype derivation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation, follows Ordium.Profile.OntoUML.rule.derivationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "structurationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype structuration is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.structuration},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.structuration},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.structuration, follows Ordium.Profile.OntoUML.rule.structurationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "componentOfIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype componentOf is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf, follows Ordium.Profile.OntoUML.rule.componentOfIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "containmentIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype containment is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment, follows Ordium.Profile.OntoUML.rule.containmentIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "memberOfIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype memberOf is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf, follows Ordium.Profile.OntoUML.rule.memberOfIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subCollectionOfIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype subCollectionOf is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf, follows Ordium.Profile.OntoUML.rule.subCollectionOfIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subQuantityOfIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype subQuantityOf is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf, follows Ordium.Profile.OntoUML.rule.subQuantityOfIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "comparativeIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype comparative is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.comparative},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.comparative},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.comparative, follows Ordium.Profile.OntoUML.rule.comparativeIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "externalDependenceIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype externalDependence is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence, follows Ordium.Profile.OntoUML.rule.externalDependenceIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalDependenceIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype historicalDependence is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence, follows Ordium.Profile.OntoUML.rule.historicalDependenceIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "instantiationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype instantiation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.instantiation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.instantiation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.instantiation, follows Ordium.Profile.OntoUML.rule.instantiationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "participationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype participation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation, follows Ordium.Profile.OntoUML.rule.participationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "participationalIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype participational is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational, follows Ordium.Profile.OntoUML.rule.participationalIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "bringsAboutIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype bringsAbout is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout, follows Ordium.Profile.OntoUML.rule.bringsAboutIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "creationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype creation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation, follows Ordium.Profile.OntoUML.rule.creationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "terminationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype termination is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination, follows Ordium.Profile.OntoUML.rule.terminationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "manifestationIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype manifestation is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation, follows Ordium.Profile.OntoUML.rule.manifestationIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "triggersIsRelationStereotype", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relationStereotype, hasNote "OntoUML relation stereotype triggers is a member of relation family relationStereotype.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers, follows Ordium.Profile.OntoUML.rule.triggersIsRelationStereotype.AO__1.AG__1}
+      }
+    },
+    AO {hasName "externalDependenceIsDependencyRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.dependencyRelation, hasNote "OntoUML relation stereotype externalDependence is a member of relation family dependencyRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.externalDependence, follows Ordium.Profile.OntoUML.rule.externalDependenceIsDependencyRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "historicalDependenceIsDependencyRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.dependencyRelation, hasNote "OntoUML relation stereotype historicalDependence is a member of relation family dependencyRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.historicalDependence, follows Ordium.Profile.OntoUML.rule.historicalDependenceIsDependencyRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mediationIsDependencyRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.dependencyRelation, hasNote "OntoUML relation stereotype mediation is a member of relation family dependencyRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation, follows Ordium.Profile.OntoUML.rule.mediationIsDependencyRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "characterizationIsDependencyRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.dependencyRelation, hasNote "OntoUML relation stereotype characterization is a member of relation family dependencyRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.characterization, follows Ordium.Profile.OntoUML.rule.characterizationIsDependencyRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "componentOfIsPartWholeRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.partWholeRelation, hasNote "OntoUML relation stereotype componentOf is a member of relation family partWholeRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.componentOf, follows Ordium.Profile.OntoUML.rule.componentOfIsPartWholeRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "containmentIsPartWholeRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.partWholeRelation, hasNote "OntoUML relation stereotype containment is a member of relation family partWholeRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.containment, follows Ordium.Profile.OntoUML.rule.containmentIsPartWholeRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "memberOfIsPartWholeRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.partWholeRelation, hasNote "OntoUML relation stereotype memberOf is a member of relation family partWholeRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.memberOf, follows Ordium.Profile.OntoUML.rule.memberOfIsPartWholeRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subCollectionOfIsPartWholeRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.partWholeRelation, hasNote "OntoUML relation stereotype subCollectionOf is a member of relation family partWholeRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subCollectionOf, follows Ordium.Profile.OntoUML.rule.subCollectionOfIsPartWholeRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "subQuantityOfIsPartWholeRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.partWholeRelation, hasNote "OntoUML relation stereotype subQuantityOf is a member of relation family partWholeRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.subQuantityOf, follows Ordium.Profile.OntoUML.rule.subQuantityOfIsPartWholeRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "participationIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype participation is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participation, follows Ordium.Profile.OntoUML.rule.participationIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "participationalIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype participational is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.participational, follows Ordium.Profile.OntoUML.rule.participationalIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "bringsAboutIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype bringsAbout is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.bringsAbout, follows Ordium.Profile.OntoUML.rule.bringsAboutIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "creationIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype creation is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.creation, follows Ordium.Profile.OntoUML.rule.creationIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "terminationIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype termination is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.termination, follows Ordium.Profile.OntoUML.rule.terminationIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "manifestationIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype manifestation is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.manifestation, follows Ordium.Profile.OntoUML.rule.manifestationIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "triggersIsEventRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.eventRelation, hasNote "OntoUML relation stereotype triggers is a member of relation family eventRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.triggers, follows Ordium.Profile.OntoUML.rule.triggersIsEventRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "materialIsRelatorRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relatorRelation, hasNote "OntoUML relation stereotype material is a member of relation family relatorRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.material, follows Ordium.Profile.OntoUML.rule.materialIsRelatorRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "mediationIsRelatorRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relatorRelation, hasNote "OntoUML relation stereotype mediation is a member of relation family relatorRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.mediation, follows Ordium.Profile.OntoUML.rule.mediationIsRelatorRelation.AO__1.AG__1}
+      }
+    },
+    AO {hasName "derivationIsRelatorRelation", hasPredicate Ordium.Profile.OntoUML.RelationFamily.relatorRelation, hasNote "OntoUML relation stereotype derivation is a member of relation family relatorRelation.",
+      AG {hasName "value", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation},
+      AO {hasName "AO__1", isExplicit false, hasPredicate Ordium.Core.rule.eq,
+        AG {hasName "AG__1", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation},
+        AG {hasName "AG__2", bindsTo Ordium.Profile.OntoUML.RelationStereotype.derivation, follows Ordium.Profile.OntoUML.rule.derivationIsRelatorRelation.AO__1.AG__1}
+      }
+    }
+  }
+}
