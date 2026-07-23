@@ -1,5 +1,5 @@
-// PAMoLa Core v1.0.0
-// Minimal MLT profile vocabulary used by the ER 2026 artifact.
+
+// MLT profile
 
 EN {hasName "MLT", hasFQN "Ordium.Profile.MLT", hasPID "profile:mlt:v1.0.0", hasNote "Minimal MLT vocabulary used by the ER 2026 OntoUML/MLT diagnostic artifact. Terms are referenceable DataValues; semantics are supplied by the diagnostic ware.", hasCustodian Ordium.Profile, hasLinguisticType Ordium.Core.Entity,
   DT {hasName "PowertypeRelation",
