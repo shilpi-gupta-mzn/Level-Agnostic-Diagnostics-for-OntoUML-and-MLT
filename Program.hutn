@@ -1,5 +1,3 @@
-// PAMoLa Core v1.0.0
-// Authoritative reified diagnostic ware; generated textual Datalog is a projection.
 
 EN {hasName "ER2026OntoUMLMLTDiagnostics", hasFQN "Ordium.Library.ER2026OntoUMLMLTDiagnostics", hasPID "ware:er2026:ontouml-mlt-diagnostics:v1.0.0", hasNote "PAMoLa v1.0.0 diagnostic ware for ER 2026 paper 124. The reified AO/PM/AG content is authoritative; textual Datalog is a generated projection.", hasCustodian Ordium.Library, hasLinguisticType Ordium.Core.Entity,
   DT {hasName "DiagnosticSeverity",
