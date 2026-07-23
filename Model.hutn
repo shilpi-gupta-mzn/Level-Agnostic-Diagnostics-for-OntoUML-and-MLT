@@ -1,0 +1,122 @@
+// PAMoLa Core v1.0.0
+// Migrated ER 2026 diagnostic model; FHAS is authoritative model content.
+
+EN {hasName "ER2026DiagnosticModel", hasFQN "Ordium.Domain.ER2026DiagnosticModel", hasPID "pid:pamola:c8c5993f-3627-53b4-8f36-a422f0663873", hasNote "PAMoLa v1.0.0 migration of the violation-seeded OntoUML/MLT diagnostic model used in ER 2026 paper 124.", hasCustodian Ordium.Domain, hasLinguisticType Ordium.Core.Entity,
+  EN {hasName "O0",
+    EN {hasName "PersonType", hasPotency 2,
+      MK {hasName "stereotype_kind", hasTag Ordium.Profile.OntoUML.ClassStereotype.kind},
+      MK {hasName "powertypeOf_Person", hasTag Ordium.Profile.MLT.PowertypeRelation.powertypeOf, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Person}
+    },
+    EN {hasName "PersonTypeByGender", hasPotency 2,
+      MK {hasName "stereotype_kind", hasTag Ordium.Profile.OntoUML.ClassStereotype.kind},
+      MK {hasName "partitions_Person", hasTag Ordium.Profile.MLT.PowertypeRelation.partitions, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Person},
+      MK {hasName "categorizes_Person", hasTag Ordium.Profile.MLT.PowertypeRelation.categorizes, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Person}
+    },
+    EN {hasName "EmployeeType", hasPotency 2,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      MK {hasName "categorizes_Person", hasTag Ordium.Profile.MLT.PowertypeRelation.categorizes, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Person}
+    },
+    EN {hasName "ResearcherTypeByDoctoralStatus", hasPotency 2,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      MK {hasName "partitions_Researcher", hasTag Ordium.Profile.MLT.PowertypeRelation.partitions, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Researcher}
+    },
+    EN {hasName "ResearcherTypeByContractStatus", hasPotency 2,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind},
+      MK {hasName "partitions_Researcher", hasTag Ordium.Profile.MLT.PowertypeRelation.partitions, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Researcher}
+    },
+    CA {hasName "PersonTypeByGender_specializes_PersonType", isComplete false, isDisjoint false,
+      IC {hasName "general_PersonType", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.PersonType},
+      IC {hasName "special_PersonTypeByGender", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.PersonTypeByGender}
+    },
+    CA {hasName "EmployeeType_specializes_PersonType", isComplete false, isDisjoint false,
+      IC {hasName "general_PersonType", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.PersonType},
+      IC {hasName "special_EmployeeType", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.EmployeeType}
+    },
+    CA {hasName "ResearcherContract_specializes_EmployeeType", isComplete false, isDisjoint false,
+      IC {hasName "general_EmployeeType", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.EmployeeType},
+      IC {hasName "special_ResearcherTypeByContractStatus", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByContractStatus}
+    },
+    CA {hasName "ResearcherDoctoral_specializes_EmployeeType", isComplete false, isDisjoint false,
+      IC {hasName "general_EmployeeType", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.EmployeeType},
+      IC {hasName "special_ResearcherTypeByDoctoralStatus", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByDoctoralStatus}
+    },
+    CA {hasName "ResearcherDoctoral_specializes_ResearcherContract", isComplete false, isDisjoint false,
+      IC {hasName "general_ResearcherTypeByContractStatus", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByContractStatus},
+      IC {hasName "special_ResearcherTypeByDoctoralStatus", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByDoctoralStatus}
+    }
+  },
+  EN {hasName "O1",
+    EN {hasName "Person", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.PersonType,
+      MK {hasName "stereotype_kind", hasTag Ordium.Profile.OntoUML.ClassStereotype.kind}
+    },
+    EN {hasName "Man", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.PersonTypeByGender,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind}
+    },
+    EN {hasName "Woman", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.PersonTypeByGender,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind}
+    },
+    EN {hasName "Manager", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.EmployeeType,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    EN {hasName "Researcher", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.EmployeeType,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    EN {hasName "ManWomanOverlap", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.PersonTypeByGender,
+      MK {hasName "stereotype_subkind", hasTag Ordium.Profile.OntoUML.ClassStereotype.subkind}
+    },
+    EN {hasName "PhDResearcher", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByDoctoralStatus,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    EN {hasName "NonPhDResearcher", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByDoctoralStatus,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    EN {hasName "PermanentResearcher", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByContractStatus,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    EN {hasName "FixedTermResearcher", hasPotency 1, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.ResearcherTypeByContractStatus,
+      MK {hasName "stereotype_role", hasTag Ordium.Profile.OntoUML.ClassStereotype.role}
+    },
+    CA {hasName "GenderPartition", isComplete true, isDisjoint true,
+      IC {hasName "general_Person", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Person},
+      IC {hasName "special_Man", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Man},
+      IC {hasName "special_Woman", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Woman}
+    },
+    CA {hasName "EmployeeRoles", isComplete false, isDisjoint false,
+      IC {hasName "general_Person", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Person},
+      IC {hasName "special_Manager", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Manager},
+      IC {hasName "special_Researcher", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Researcher}
+    },
+    CA {hasName "ManWomanOverlap_specializes_Man", isComplete false, isDisjoint false,
+      IC {hasName "general_Man", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Man},
+      IC {hasName "special_ManWomanOverlap", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.ManWomanOverlap}
+    },
+    CA {hasName "ManWomanOverlap_specializes_Woman", isComplete false, isDisjoint false,
+      IC {hasName "general_Woman", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Woman},
+      IC {hasName "special_ManWomanOverlap", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.ManWomanOverlap}
+    },
+    CA {hasName "ResearcherDoctoralStatus", isComplete true, isDisjoint true,
+      IC {hasName "general_Researcher", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Researcher},
+      IC {hasName "special_PhDResearcher", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.PhDResearcher},
+      IC {hasName "special_NonPhDResearcher", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.NonPhDResearcher}
+    },
+    CA {hasName "ResearcherContractStatus", isComplete true, isDisjoint true,
+      IC {hasName "general_Researcher", isGeneralisation true, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Researcher},
+      IC {hasName "special_PermanentResearcher", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.PermanentResearcher},
+      IC {hasName "special_FixedTermResearcher", isGeneralisation false, hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.FixedTermResearcher}
+    },
+    RE {hasName "worksFor", hasPotency 1, hasAssociationName "worksFor",
+      PA {hasName "researcherEnd", hasRoleName "researcher", hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Researcher},
+      PA {hasName "managerEnd", hasRoleName "manager", hasRelatum Ordium.Domain.ER2026DiagnosticModel.O1.Manager}
+    }
+  },
+  EN {hasName "O2",
+    EN {hasName "Ana", hasPotency 0, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O1.Woman},
+    EN {hasName "Bob", hasPotency 0, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O1.Man},
+    EN {hasName "Alex", hasPotency 0,
+      MK {hasName "instantiates_Manager", hasTag Ordium.Profile.OntoUML.RelationStereotype.instantiation, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Manager},
+      MK {hasName "instantiates_Researcher", hasTag Ordium.Profile.OntoUML.RelationStereotype.instantiation, refersTo Ordium.Domain.ER2026DiagnosticModel.O1.Researcher}
+    },
+    EN {hasName "Casey", hasPotency 0, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O1.ManWomanOverlap},
+    EN {hasName "Taylor", hasPotency 0, hasDeclaredType Ordium.Domain.ER2026DiagnosticModel.O0.PersonTypeByGender}
+  }
+}
