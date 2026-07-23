@@ -1,6 +1,3 @@
-// PAMoLa Core v1.0.0
-// Migrated ER 2026 diagnostic model; FHAS is authoritative model content.
-
 EN {hasName "ER2026DiagnosticModel", hasFQN "Ordium.Domain.ER2026DiagnosticModel", hasPID "pid:pamola:c8c5993f-3627-53b4-8f36-a422f0663873", hasNote "PAMoLa v1.0.0 migration of the violation-seeded OntoUML/MLT diagnostic model used in ER 2026 paper 124.", hasCustodian Ordium.Domain, hasLinguisticType Ordium.Core.Entity,
   EN {hasName "O0",
     EN {hasName "PersonType", hasPotency 2,
